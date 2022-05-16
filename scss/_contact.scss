@@ -1,0 +1,30 @@
+// 
+//  contact 
+// 
+
+
+.contact {
+  .contact-form {
+    .input-group-text {
+        padding: 12px 15px;
+        border: none;
+        background-color: rgba($primary, 1);
+        color: $white;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        bottom: 0;
+      }
+      .form-control {
+        padding: 12px 20px !important;
+        padding-left: 58px !important;
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+    }
+  }
+}

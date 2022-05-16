@@ -1,0 +1,37 @@
+/* Template Name: Kasy
+   File Description: Main Css file of the template
+*/
+
+/****************************************
+
+01.variables
+02.general
+03.helper
+04.components
+05.avatar
+06.menu
+07.home
+08.about
+09.features
+10.counter
+11.pricing
+12.footer
+
+
+*****************************************/
+
+@import "variables";
+@import "general";
+@import "helper";
+@import "components";
+@import "avatar";
+@import "menu";
+@import "home";
+@import "cta";
+@import "features";
+@import "reviews";
+@import "pricing";
+@import "team";
+@import "contact";
+@import "authentication";
+@import "footer";

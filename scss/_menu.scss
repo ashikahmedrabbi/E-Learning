@@ -1,0 +1,180 @@
+
+//
+// menu.scss
+//
+
+.navbar-custom {
+  background-color: transparent;
+  padding: 18px 0px;
+  width: 100%;
+  border-radius: 0px;
+  z-index: 999;
+  margin-bottom: 0px;
+  transition: all 0.5s ease-in-out;
+  .navbar-brand {
+    margin-right: 0;
+    .logo-light {
+      display: inline-block;
+    }
+    .logo-dark {
+      display: none;
+    }
+  }
+  .navbar-collapse {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          font-size: 14.5px;
+          color: rgba($white, 0.70);
+          margin: 0 14px;
+          transition: all .5s;
+          position: relative;
+          font-weight: 500;
+          &.active {
+            color: $white;
+            &::before{
+              width: 100%;
+            }
+          }
+          &::before{
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            width: 0px;
+            height: 2px;
+            background-color: $white;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.2s;
+          }
+        }
+      }
+    }
+    .nav-btn {
+      padding: 7px 25px;
+      border-radius: 50px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+  }
+  .navbar-toggler {
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: $dark;
+    &:focus {
+        box-shadow: 0 0 0 1.25px;
+    }
+  }
+}
+
+/*---NAVBAR STICKY--*/
+
+.nav-sticky {
+  &.navbar-custom {
+    margin-top: 0px;
+    padding: 18px 0px;
+    background-color: $white;
+    box-shadow: 0px 3px 10px 0px rgba(38, 107, 193, 0.08);
+  }
+  .navbar-brand {
+    .logo-dark {
+      display: inline-block;
+    }
+    .logo-light {
+      display: none;
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+          color: rgba($black, 1) !important;
+          &.active {
+            color: rgba($primary, 1) !important;
+          }
+          &:hover {
+            color: $primary !important;
+          }
+          &::before {
+            background-color: $primary !important;
+        }
+      }
+    }
+  }
+  .nav-btn {
+    background-color: rgba($primary, 1);
+    color: rgba($white, 1);
+  }
+}
+
+
+.modal {
+  .modal-dialog {
+    .modal-content {
+      .modal-close {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+        z-index: 2;
+      }
+      .modal-body {
+        .modal-title {
+          font-weight: 600;
+        }
+      }
+      .modal-footer {
+        .footer-text {
+          margin-bottom: 2px;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) { 
+  .navbar-custom {
+    padding: 18px 0px;
+    background-color: rgba($white, 1);
+    .navbar-brand {
+      margin-left: 14px;
+      .logo-dark {
+        display: inline-block !important;
+      }
+      .logo-light {
+        display: none !important;
+      }
+    }
+    .nav-item {
+      .nav-link {
+        display: inline-block;
+        color: rgba($black, 1) !important;
+        &.active {
+          color: $primary;
+        }
+      }
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+          color: rgba($black, 1) !important;
+          &.active {
+            color: rgba($primary, 1) !important;
+          }
+          &:hover {
+            color: $primary !important;
+          }
+          &::before {
+            background-color: $primary !important;
+        }
+      }
+    }
+  }
+  .nav-btn {
+    background-color: rgba($primary, 1) !important;
+    color: rgba($white, 1) !important;
+  }
+}

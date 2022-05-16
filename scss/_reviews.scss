@@ -1,0 +1,64 @@
+//
+// reviews
+//
+
+.reviews {
+    background: rgba($light, 0.08);
+    .reviews-box {
+        .card-body {
+            padding: 30px;
+            .reviews-card {
+                position: relative;
+                border-color: rgba($primary, 0.8);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -54px;
+                    z-index: -3;
+                    height: 400px;
+                    width: 180px;
+                    align-self: center;
+                    background-color: rgba($primary, 0.3);
+                }
+                .card-body {
+                    padding: 15px;
+                }
+            }
+            .reviews-heading {
+                position: relative;
+                margin: 18px 0;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 26px;
+                    height: 5px;
+                    width: 190px;
+                    background-color: rgba($primary, 1);
+                }
+            }
+        }
+    }
+    .carousel-indicators {
+        left: 10%;
+        top: 70%;
+        button {
+            width: 12px;
+            height: 12px;
+            background-color: rgba($primary, 0.8);
+            border-radius: 50%;
+        }
+    }
+    .reviews-quote-1 {
+        width: 40px;
+        opacity: 0.3;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .carousel-indicators {
+        display: none;
+    }
+}
+
+

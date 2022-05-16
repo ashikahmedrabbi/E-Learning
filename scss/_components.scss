@@ -1,0 +1,76 @@
+//
+// components.scss
+//
+
+.btn {
+  padding: 13px 36px;
+  font-size: 14px;
+  font-weight: $font-weight-medium;
+  transition: all 0.5s ease;
+  position: relative;
+  &:hover {
+    text-shadow: 0px 0.2px 0px rgba(0, 0, 0, 1);
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    background: #{$value};
+    border-color: #{$value} !important;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.focus,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled):active:focus,
+    .open > .dropdown-toggle.btn-primary {
+      background: darken($value, 4%);
+      border-color: darken($value, 4%);
+      box-shadow: 0px 8px 20px -6px rgba($value, 0.6);
+      transform: translateY(-6px);
+    }
+  }
+  .btn-outline-#{$color} {
+    color: #{$value};
+    border-color: #{$value};
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.focus,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled):active:focus,
+    .open > .dropdown-toggle.btn-primary {
+      background: $value;
+      border-color: $value;
+      box-shadow: 0px 8px 20px -6px rgba($value, 0.6);
+      transform: translateY(-6px);
+    }
+  }
+}
+
+.btn {
+  &.btn-outline-white,
+  &.btn-outline-light {
+    &:focus,
+    &:active,
+    &:hover,
+    &.active {
+      color: $dark;
+    }
+  }
+  &.btn-outline-primary,
+  &.btn-outline-dark,
+  &.btn-outline-success {
+    &:focus,
+    &:active,
+    &:hover,
+    &.active {
+      color: $white !important;
+    }
+  }
+}

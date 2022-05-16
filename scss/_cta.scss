@@ -1,0 +1,22 @@
+
+// 
+// cta
+// 
+
+
+.cta {
+    position: relative;
+    background: linear-gradient(rgba($black, .7),rgba($black, .7)), url("../images/cta.jpg") fixed no-repeat;
+    color: $white;
+    .cta-heading {
+        font-size: 35px;
+        font-weight: 600;
+    }
+    marquee {
+        position: absolute;
+        top: 0;
+        background-color: rgba($black, 0.5);
+        padding: 6px;
+        font-size: 14px;
+    }
+}

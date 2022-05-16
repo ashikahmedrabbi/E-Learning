@@ -1,0 +1,124 @@
+// 
+//  peicing
+// 
+
+.pricing {
+    .pricing-box {
+        transition: all 0.8s;
+        border-radius: 12px;
+        position: relative;
+        &:hover {
+            transform: translateY(-10px);
+            border: 1px solid $primary !important;
+            transition: all 0.9s;
+            .card {
+                transition: all 0.09s;
+                background-color: rgba($primary, 1);
+                transition: all 0.9s;
+                .card-body {
+                  border-bottom: none;
+                  h6 {
+                    color: $white;
+                  }
+                  h1 {
+                    color: $white;
+                    sub {
+                      color: $white;
+                    }
+                  }
+                }
+            }
+          }
+        ul {
+          li {
+            padding: 8px 0;
+          }
+        }
+        .pricing-lable {
+            position: absolute;
+            background-color: rgba($primary, 1);
+            color: $white;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 90px;
+            z-index: 1;
+            top: -1px;
+            right: 0;
+            transform: rotate(-90deg) translateX(-27%);
+            &::after {
+              content: "";
+              border-top: 20px solid rgba($primary, 1);
+              border-bottom: 20px solid rgba($primary, 1);
+              border-left: 16px solid transparent;
+              position: absolute;
+              left: -15px;
+              top: 0;
+            }
+        }
+        .card {
+          border: none;
+          border-radius: 9px 9px 0 0;
+          background: transparent;
+          .card-body {
+            padding: 25px;
+            border-bottom: 1px solid rgba($muted, 0.352);
+            h6 {
+              color: $primary;
+            }
+            h1 {
+              sub {
+                color: $muted;
+              }
+            }
+          }
+        }
+      }
+      .active {
+        border: 1px solid $primary !important;
+        transform: translateY(-10px);
+        .pricing-lable {
+          background-color: rgba($white, 1);
+          text-transform: uppercase;
+          transition: all 0.9s;
+          color: $black;
+          &::after {
+            border-color: rgba($white, 1);
+            border-left: 16px solid transparent;
+            transition: all 0.9s;
+          }
+        }
+        .card {
+          background-color: rgba($primary, 1);
+          transition: all 0.9s;
+          .card-body {
+            border-bottom: none;
+            h6 {
+              color: $white;
+            }
+            h1 {
+              color: $white;
+              sub {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+  }
+  
+
+  @media (max-width: 768px) { 
+    .bg-shape {
+        background: transparent;
+    }
+    .pricing-bg {
+        &::before {
+            display: none;
+        }
+    }
+}
+  

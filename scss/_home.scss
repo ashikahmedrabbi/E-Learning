@@ -1,0 +1,372 @@
+//
+//home.scss
+//
+
+.home {
+    background-position: center;
+    background-size: cover;
+    padding: 215px 0;
+    .home-heading {
+        h1 {
+            font-size: 45px;
+            font-weight: $font-weight-semibold;
+            line-height: 1.4;
+        }
+    }
+    .home-btn {
+        margin-top: 30px;
+        .modal-btn {
+            position: relative;
+            padding: 13px 52px 13px 30px;
+            span {
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                i {
+                    font-size: 34px;
+                }
+            }
+            &:hover,
+            &:focus {
+                .btn-icon {
+                    background-color: $white;
+                    color: $primary;
+                    transition: all 0.9s ease;
+                }
+            }
+        }
+    }
+    .home-modal {
+        border: 0;
+        background-color: transparent;
+        .btn-close {
+          width: 24px;
+          height: 24px;
+          background-color: rgba($dark, 0.5);
+          border-radius: 4px;
+          position: relative;
+          top: 60px;
+          right: 3px;
+          z-index: 3;
+          &:hover,
+          &:focus {
+            opacity: 0.5;
+          }
+        }
+        video {
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+}
+
+
+// home 1
+
+.home-1 {
+    background-image: url(../images/home-1.png);
+    .bg-overlay {
+        background: linear-gradient( 131deg, #0f5650, transparent);
+    }
+}
+
+
+// home 2
+
+
+.home-2 {
+    background-image: url("../images/home-2.jpg");
+    #myVideo {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .bg-overlay {
+        background-color: rgba($black, 0.6);
+        background-image: none;
+    }
+}
+
+
+// home-3
+.home-3 {
+    background-image: url("../images/home-3.png");
+    .bg-overlay {
+        background-color: rgba($black, 0.6);
+        background-image: none;
+    }
+}
+
+.home-modal {
+    border: 0;
+    background-color: transparent;
+    .btn-close {
+      width: 24px;
+      height: 24px;
+      background-color: rgba($dark, 0.5);
+      border-radius: 4px;
+      position: relative;
+      top: 60px;
+      right: 3px;
+      z-index: 3;
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+      }
+    }
+    video {
+      &:focus {
+        outline: none;
+      }
+    }
+}
+
+.text-cursor {
+    cursor: text;   
+}
+
+.grabbable {
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    &:active {
+        cursor: grabbing;
+        cursor: -moz-grabbing;
+        cursor: -webkit-grabbing;
+    }
+}
+
+// home-4 
+
+    .bottom-img {
+        position: relative;
+        bottom: -215px;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+
+.home-4 {
+    background-color: rgba($primary, 1);
+    .home-btn {
+        .modal-btn {
+            .btn-icon {
+                color: rgba($primary, 1);
+                background-color: rgba($white, 1);
+            }
+        }
+    }
+    .shape-1 {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 100%;
+        animation: shape-1 1.5s alternate infinite ease;
+    }
+    .shape-2 {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        left: 40%;
+        animation: shape-2 2.5s alternate infinite ease;
+    }
+    .shape-3 {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 0%;
+        animation: shape-3 3.5s alternate infinite ease;
+    }
+    .frame {
+        width: 55px;
+        height: 55px;
+        position: absolute;
+        left: 70%;
+        animation: frame 3.5s alternate infinite ease;
+    }
+}
+
+@keyframes shape-1 {
+    0% {
+        top: 80%;
+    }
+    40% {
+        height: auto;
+        transform: scaleX(1);
+    }
+    100% {
+        top: 0%;
+    }
+}
+
+@keyframes shape-2 {
+    0% {
+        top: 3%;
+    }
+    40% {
+        height: auto;
+        transform: scaleX(1);
+    }
+    100% {
+        top: 25%;
+    }
+}
+
+@keyframes shape-3 {
+    0% {
+        top: 60%;
+    }
+    40% {
+        height: auto;
+        transform: scaleX(1);
+    }
+    100% {
+        top: 0%;
+    }
+}
+
+@keyframes frame {
+    0% {
+        top: 0%;
+    }
+    50% {
+        top: 3%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+
+// home-5
+
+.home-5 {
+    background-color: rgba($primary, 5);
+    padding: 244px ​0; 
+    .home-shape {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        bottom: -2px;
+        left: -15px;
+    }
+    .contact-form {
+        background-color: rgba($primary, 0.3);
+        border: 1px solid rgba($white, 1);
+        border-radius: 10px;
+        padding: 20px;
+        .icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            width: 50px;
+            height: 50px;
+            border-radius: 999px;
+            font-size: 30px;
+            color: $white;
+        }
+    }
+    .input-group-text {
+        padding: 12px 15px;
+        border: none;
+        background-color: rgba($light, 0.4);
+        color: $black;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        bottom: 0;
+    }
+    .form-control {
+        padding: 12px 20px !important;
+        padding-left: 58px !important;
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+    }
+}
+
+
+// home-6 
+
+.home-6 {
+    background-image: url("../images/home-6bg.png");
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 64% 90%, 22% 100%, 0 87%);
+    .book {
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        left: -2%;
+        animation: book 1.5s alternate infinite ease;
+    }
+    .drive {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 58%;
+        animation: drive 2.5s alternate infinite ease;
+    }
+}
+
+@keyframes book {
+    0% {
+        top: 31%;
+    }
+    40% {
+        transform: scaleX(1);
+    }
+    100% {
+        top: 33%;
+    }
+}
+
+@keyframes drive {
+    0% {
+        top: 63%;
+    }
+    40% {
+        transform: scaleX(1);
+    }
+    100% {
+        top: 74%;
+    }
+}
+
+
+@media (max-width: 1200px) { 
+    .home {
+        .home-img {
+            height: auto;
+            max-width: 100%;
+        }
+    }
+ }
+
+@media (max-width: 576px) { 
+    .home {
+        padding: 100px 0;
+        .modal-btn {
+            padding: 13px 75px 13px 30px !important;
+        }
+        .home-heading {
+            h1 {
+                font-size: 36px;
+            }
+        }
+    }
+    .home-2 {
+        padding: 130px 0;
+    }
+}

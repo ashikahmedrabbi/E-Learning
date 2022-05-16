@@ -1,0 +1,109 @@
+// 
+// authentication
+// 
+
+// recoverpw css
+
+.bg-account-pages {
+    background: rgba($white, 1);
+    background: linear-gradient(180deg, rgba($white, 1) 0%, rgba($primary, 1) 81%);
+    display: flex;
+    align-items: center;
+    .home-btn {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+    .card {
+        border: none;
+        .card-body {
+            .alert {
+                position: relative;
+                padding: 0.75rem 1.25rem;
+                margin-bottom: 1rem;
+                border: 1px solid transparent;
+                border-radius: 0.25rem;
+            }
+            form {
+                .form-check {
+                    .form-check-input {
+                        font-size: 14px;
+                    }
+                    .form-check-label {
+                        font-size: 13px;
+                    }
+                }
+                button {
+                    padding: 10px 0;
+                }
+            }
+        }
+        .mt-n5 {
+            margin-top: -50px;
+        }
+        .plan-line {
+            font-size: 15px;
+            &::before {
+                content: "";
+                border: 1px solid #ebebeb;
+                position: absolute;
+                width: 26%;
+                left: 64%;
+                top: 11px;
+            }
+            &::after {
+                content: "";
+                border: 1px solid #ebebeb;
+                position: absolute;
+                width: 26%;
+                right: 64%;
+                top: 11px;
+            }
+        }
+        .form-control {
+            padding: 9px 12px;
+            font-size: 14px;
+        }
+    }
+}
+
+
+
+.btn-social-icon {
+    li {
+        background-color: $primary;
+        border: 1px solid transparent;
+        transition: all 0.6s ease;
+        font-size: 18px;
+        border-radius: 45px;
+        width: 33px;
+        height: 33px;
+        line-height: 30px;
+        &:hover {
+            background-color: $white;
+            border: 1px solid $light;
+            a {
+                color: $primary;
+            }
+        }
+        a {
+            color: $white;
+        }
+    }
+}
+
+@media (max-width: 576px) { 
+    .bg-account-pages {
+        .home-btn {
+            display: none;
+        }
+        .plan-line {
+            &::before {
+                display: none;
+            }
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

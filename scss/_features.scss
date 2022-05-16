@@ -1,0 +1,154 @@
+// 
+//  featuers
+//
+
+
+.feature {
+    .feature-card {
+        border: none;
+        background: transparent;
+        padding: 28px 29px;
+        position: relative;
+        border-radius: 10px;
+        &:hover{
+            color: rgba($primary, 0.9);
+            &:before {
+                height: 100%;
+                width: 100%;
+                background-color: rgba($primary, 0.2);
+            }
+        }
+        &::before {
+            content: "";
+            height: 80px;
+            width: 80px;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+    }
+    .feature-heading {
+        position: relative;
+        font-size: 28px;
+        margin-bottom: 4px;
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: rgba($primary, 0.4);
+          height: 50px;
+          width: 50px;
+          bottom: -14px;
+          border-radius: 100% 38% 100% 51% / 45% 49% 100% 100%;
+          z-index: -1;
+          transform: translateX(-50%);
+          height: 38px;
+          width: 38px;
+          bottom: 0px;
+          left: 15px;
+        }
+    }
+    .feature-list {
+        margin: 30px 0;
+        list-style: none;
+        padding: 0;
+        li {
+            position: relative;
+            display: flex;
+            padding: 15px 25px 15px 15px;
+            margin: 0;
+            border-bottom: 1px solid rgba($primary, 0.09);
+            transition: all .3s ease;
+            font-size: 14px;
+            color: $muted;
+            &:hover {
+                background: rgba($primary, 0.2);
+                border-radius: 8px;
+            }
+            i {
+                margin-right: 8px;
+                font-size: 22px;
+                line-height: 19px;
+            }
+        }
+    }
+}
+
+.accordion {
+    margin-top: 30px;
+    .accordion-item {
+        .accordion-header {
+            .accordion-button {
+                background: rgba($light, 0.06);
+                font-weight: 500;
+                padding: 10px 20px;
+                box-shadow: none;
+                &:hover {
+                    color: $primary;
+                }
+                &:focus {
+                    border-color: $gray-300;
+                }
+                &::after {
+                    background-image: none;
+                    content: "\F0140";
+                    font-family: "Material Design Icons";
+                    background: transparent;
+                    font-size: 24px;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        .accordion-collapse {
+            .accordion-body {
+                a {
+                    text-decoration: none;
+                    font-size: 14px;
+                    color: $black;
+                    font-weight: 500;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    
+    .accordion-button:not(.collapsed) {
+        color: $primary;
+        font-weight: 500;
+        border-bottom: 1px solid rgba($light, 0.5);
+        box-shadow: none;
+        &::after {
+            background-image: none;
+            content: "\F0140";
+            font-family: "Material Design Icons";
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+            background-color: transparent;
+            color: $primary;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 1024px) { 
+    .features-box {
+        .card-body {
+            padding: 45px !important;
+        }
+    }
+}
+
